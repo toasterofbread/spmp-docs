@@ -1,0 +1,79 @@
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  backgroundImage:
+    path: "images"
+    filename:
+      desktop: "waves.svg"
+
+  badge:
+    text: v0.2.4
+    color: primary
+    pill: false
+    soft: true
+
+  title: "SpMp"
+  subtitle: A YouTube Music client with a focus on customisation of colours and song metadata, built using Compose Multiplatform for Android and desktop.
+
+  image:
+    path: "images"
+    filename: "preview.png"
+    boxShadow: true
+    rounded: true
+
+  ctaButton:
+    icon: fa-solid fa-book
+    btnText: "Documentation"
+    url: "/docs"
+  cta2Button:
+    icon: fa-brands fa-github
+    btnText: "Source code"
+    url: "https://github.com/toasterofbread/spmp"
+
+  info: "[Licensed](https://github.com/toasterofbread/spmp/blob/main/LICENSE) under GPLv3"
+
+featureGrid:
+  enable: false
+
+imageCompare:
+  enable: false
+  weight: 30
+  template: image compare
+
+  # title: 
+  # subtitle: 
+  width: 500px
+
+  items:
+    - title: Player
+      config: {
+        startingPoint: 25,
+        addCircle: true,
+        addCircleBlur: false
+      }
+      imagePath: "images/comparison"
+      imageBefore: "player02.png"
+      imageAfter: "player03.png"
+
+    - title: Queue
+      config: {
+        controlColor: "#3C4257",
+        startingPoint: 75,
+        addCircle: true,
+        addCircleBlur: false
+      }
+      imagePath: "images/comparison"
+      imageBefore: "queue01.png"
+      imageAfter: "queue02.png"
+
+    - title: Artist
+      config: {
+        startingPoint: 25,
+        addCircle: true,
+        addCircleBlur: false
+      }
+      imagePath: "images/comparison"
+      imageBefore: "artist01.png"
+      imageAfter: "artist02.png"

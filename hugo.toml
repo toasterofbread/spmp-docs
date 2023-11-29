@@ -1,0 +1,31 @@
+baseURL = "https://spmp.toastbits.dev/"
+languageCode = "en-GB"
+title = "SpMp"
+
+[params]
+    google_fonts = [["Raleway", "500, 700"], ["Fira Code", "500, 700"], ["Rubik", "400"]]
+    sans_serif_font = "Rubik"
+    secondary_font = "Raleway"
+    mono_font = "Fira Code"
+
+[params.footer]
+    copyright = "Built with 愛 using [Hugo](https://github.com/gohugoio/hugo), [Lotus Docs](https://github.com/colinwilson/lotusdocs), and [Catppuccin](https://github.com/catppuccin/catppuccin)."
+    version = true
+
+[params.social]
+    github = "toasterofbread"
+
+[params.docs]
+    sidebarIcons = false
+    extLinkNewTab = false
+    titleIcon = false
+    intLinkTooltip = true
+
+[module]
+    replacements = "github.com/colinwilson/lotusdocs -> lotusdocs"
+    [[module.imports]]
+        path = "github.com/colinwilson/lotusdocs"
+        disable = false
+    [[module.imports]]
+        path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+        disable = false
