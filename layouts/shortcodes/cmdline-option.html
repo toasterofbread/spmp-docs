@@ -1,0 +1,27 @@
+{{ $name := .Get "name" }}
+{{ $alt := .Get "alt" }}
+{{ $args := .Get "args" }}
+
+<h5>
+    --{{ $name }} 
+
+    {{ if $args }}
+        {{ range split $args ", " }}
+        <code><{{ . }}></code> 
+        {{ end }}
+    {{ end }}
+    
+    <span style="opacity: 50%">
+        &nbsp;|&nbsp;
+        
+        {{ if $alt }}
+            -{{ $alt }} 
+    
+            {{ if $args }}
+                {{ range split $args ", " }}
+                <code><{{ . }}></code> 
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </span>
+</h5>

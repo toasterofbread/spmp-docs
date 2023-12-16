@@ -1,6 +1,8 @@
-+++
-weight = 0
-date = "2023-11-28"
-title = "Client"
-icon = "fa-solid fa-mobile-screen"
-+++
+---
+weight: 2
+title: "Client"
+description: ""
+icon: "fa-solid fa-code"
+date: "2023-12-08"
+toc: true
+---

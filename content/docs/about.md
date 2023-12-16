@@ -29,4 +29,4 @@ There are two versions of SpMp. Both are part of the same multiplatform project,
 
 ######
 
-SpMp, and all of its adjacent projects, are open-source and [available on GitHub](https://github.com/toasterofbread/spmp) under the GPLv3 license.
+SpMp, and all of its subprojects, are open-source and [available on GitHub](https://github.com/toasterofbread/spmp) under the GPLv3 license.

@@ -1,12 +1,15 @@
 +++
 weight = 1
 date = "2023-11-28"
-title = "SpMp-server"
+title = "About"
 icon = "fa-solid fa-book"
 toc = false
 +++
 
-###### Shortened to SpMs
+######
+
+## SpMs
+###### Short for SpMp-Server
 
 ######
 
@@ -19,8 +22,6 @@ SpMs depends on several native C libraries through Kotlin/Native's cinterop:
 - [mpv](https://mpv.io/) - Audio playback, streaming, and queue management
 - [libappindicator](https://launchpad.net/libappindicator) - Desktop tray icon on Linux
 
-When running on desktop, the SpMp client sends playback and queue manipulation requests to the SpMp server over TCP. The server processes these requests, applies them to its internal state, and notifies connected clients of any events that occured.
+The primary mode of SpMs is to run a server instance over TCP on the specified port. See [usage]({{% relref "/docs/server/usage" %}}) for more information.
 
-The primary mode of SpMs is to run a server instance over TCP on the specified port. See [TCP interface]({{% relref "/docs/server/tcp" %}}) for more information.
-
-SpMs also comes packaged with a command-line interface for interacting with another server running on a specific port. Its usage is documented at [Command-line interface]({{% relref "/docs/server/cli" %}}).
+SpMs also comes packaged with a command-line interface for interacting with another server running on a specific port. Its usage is documented [here]({{% relref "/docs/server/cli" %}}).
