@@ -31,6 +31,10 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
+      - name: Add golang-backports repository
+        run: sudo add-apt-repository ppa:longsleep/golang-backports
+      - name: Install Go
+        run: sudo apt update && sudo apt install golang-go
       - name: Checkout
         uses: actions/checkout@v3
         with:
