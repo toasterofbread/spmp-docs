@@ -22,11 +22,11 @@ There are two versions of SpMp. Both are part of the same multiplatform project,
 
 {{< snippet "server_warning.md" >}}
 
-- Split client-server architecture to allow for background playback and synchronised one-server-to-many-client setups
-- Uses [MPV](https://github.com/mpv-player/mpv) as a backend for audio and queue management
-- Developed primarily for Linux, Windows support planned
-- Currently in early development; some basic features are working but are yet to be tested thoroughly
+- Split client-server architecture to allow for background playback and synchronised one-server-to-many-client setups.
+- Uses [MPV](https://github.com/mpv-player/mpv) as a backend for audio and queue management.
+- Developed primarily for Linux. Windows is also supported, but may not receive fixes with priority.
+- Currently in early development; some basic features are working but are yet to be tested thoroughly.
 
 ######
 
-SpMp, and all of its subprojects, are open-source and [available on GitHub](https://github.com/toasterofbread/spmp) under the GPLv3 license.
+SpMp and all of its subprojects are open-source and [available on GitHub](https://github.com/toasterofbread/spmp) under the GPLv3 license.

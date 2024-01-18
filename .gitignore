@@ -2,3 +2,5 @@
 **/_gen/**
 *.lock
 *.sum
+/assets/jsconfig.json
+hugo_stats.json

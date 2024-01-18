@@ -16,8 +16,13 @@ Yt-dlp must be present on the system running the SpMs player for it to be able t
 
 ### Linux
 
+###### Dependencies
+
+- libmpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
+- libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-1))
+
 Download the Linux executable from the [releases page](https://github.com/toasterofbread/spmp-server/releases) and run it directly.
 
 ### Windows
 
-ZeroMQ cannot (practically) be statically linked to the Windows executable due to incompatibilies between it and Kotlin/Native. Instead, it is bundled with the SpMs executable in a zip file. Download the Windows package from from the [releases page](https://github.com/toasterofbread/spmp-server/releases), then extract it and run the contained executable.
+ZeroMQ cannot (practically) be statically linked to the Windows executable due to incompatibilies between it and Kotlin/Native. Instead, it is bundled with the SpMs executable in a zip file along with libmpv. Download the Windows package from from the [releases page](https://github.com/toasterofbread/spmp-server/releases), then extract it and run the contained executable.
