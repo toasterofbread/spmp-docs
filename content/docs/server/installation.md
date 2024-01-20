@@ -8,21 +8,25 @@ toc: true
 
 This page outlines methods of installing SpMs and its dependencies using pre-compiled packages. For instructions to compile SpMs from its source code, see [Building from source]({{% relref "docs/server/compilation" %}}).
 
-### Requirements
-
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) ([Arch](https://archlinux.org/packages/extra/any/yt-dlp/))
-
-Yt-dlp must be present on the system running the SpMs player for it to be able to fetch audio stream URLs for playback. This requirement will be removed at some point.
 
 ### Linux
 
-###### Dependencies
+###### Requirements
 
 - libmpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
 - libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-1))
+- libxcrypt1 ([Arch](https://archlinux.org/packages/core/x86_64/libxcrypt-compat/), [Ubuntu](https://packages.ubuntu.com/libcrypt1))
 
 Download the Linux executable from the [releases page](https://github.com/toasterofbread/spmp-server/releases) and run it directly.
 
 ### Windows
 
-ZeroMQ cannot (practically) be statically linked to the Windows executable due to incompatibilies between it and Kotlin/Native. Instead, it is bundled with the SpMs executable in a zip file along with libmpv. Download the Windows package from from the [releases page](https://github.com/toasterofbread/spmp-server/releases), then extract it and run the contained executable.
+###### Requirements
+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) ([Arch](https://archlinux.org/packages/extra/any/yt-dlp/))
+
+Yt-dlp must be present on the system running the SpMs player for it to be able to fetch audio stream URLs for playback. This requirement will be removed at some point.
+
+1. Download the Windows package from from the [releases page](https://github.com/toasterofbread/spmp-server/releases)
+2. Extract all files
+3. Run the extracted executable

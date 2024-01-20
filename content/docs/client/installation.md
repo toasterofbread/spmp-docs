@@ -26,9 +26,7 @@ APKs can be downloaded from the [release page](https://github.com/toasterofbread
 
 {{< snippet "server_warning.md" >}}
 
-**TODO: System JRE Required?** 
-
-The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases). 
+The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases). Java must be installed on the system for both OSes.
 
 **A running instance of [SpMs]({{% relref "docs/server/about" %}}) is required to use SpMp on desktop.** Eventually, SpMs will be packaged as a part of SpMp, but currently it must be installed manually. See [here]({{% relref "docs/server/installation" %}}) for instructions.
 
