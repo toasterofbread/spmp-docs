@@ -23,7 +23,7 @@ Download the Linux executable from the [releases page](https://github.com/toaste
 
 ###### Requirements
 
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation) ([Arch](https://archlinux.org/packages/extra/any/yt-dlp/))
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
 
 Yt-dlp must be present on the system running the SpMs player for it to be able to fetch audio stream URLs for playback. This requirement will be removed at some point.
 
