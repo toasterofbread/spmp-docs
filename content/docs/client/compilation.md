@@ -12,7 +12,7 @@ This page outlines procedures for compiling SpMp from its source code. For insta
 
 ##### All platforms:
 - [Git](https://git-scm.com/download/)
-- [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17)
+- [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu](https://packages.ubuntu.com/focal/openjdk-17-jre))
 
 ##### Linux (for packaging AppImage):
 - [appimagetool](https://github.com/AppImage/appimagetool/releases/) (must be accessible on PATH as `appimagetool`)
