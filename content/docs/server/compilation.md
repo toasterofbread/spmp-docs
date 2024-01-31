@@ -15,8 +15,7 @@ This page outlines procedures for compiling SpMs from its source code. For insta
 
 From a command-line terminal:
 
-1. Clone the spmp-server Git repository and its submodules 
-`git clone https://github.com/toasterofbread/spmp-server`
+1. Clone the spmp-server Git repository `git clone https://github.com/toasterofbread/spmp-server`
 
 2. Enter the cloned directory `cd spmp-server`
 
