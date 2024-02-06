@@ -21,12 +21,6 @@ Download the Linux executable from the [releases page](https://github.com/toaste
 
 ### Windows
 
-###### Requirements
-
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
-
-Yt-dlp must be present on the system running the SpMs player for it to be able to fetch audio stream URLs for playback. This requirement will be removed at some point.
-
 1. Download the Windows package from from the [releases page](https://github.com/toasterofbread/spmp-server/releases)
 2. Extract all files
 3. Run the extracted executable
