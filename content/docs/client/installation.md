@@ -1,7 +1,8 @@
 ---
 weight: 2
 title: "Installation"
-description: ""
+description: "Guide for installing the SpMp client on Android, Linux, and Windows"
+icon: "fa-solid fa-download"
 date: "2023-12-20"
 toc: true
 ---
@@ -28,7 +29,7 @@ APKs can be downloaded from the [release page](https://github.com/toasterofbread
 
 The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases). Java must be installed on the system for both OSes.
 
-**A running instance of [SpMs]({{% relref "docs/server/about" %}}) is required to use SpMp on desktop.** Eventually, SpMs will be packaged as a part of SpMp, but currently it must be installed manually. See [here]({{% relref "docs/server/installation" %}}) for instructions.
+On desktop, SpMp plays audio by connecting to a running instance of [SpMs]({{% relref "docs/server/about" %}}). If you're using a stable release, you don't need to worry about this as SpMs comes packaged with releases of SpMp and is handled automatically by default.
 
 For Linux, SpMp is packaged as a standalone AppImage which can be executed directly without installation. The Windows version comes as an installer which unpackages the application's files to `C:/Program Files/spmp` (by default). It can be run using the shortcut automatically added to the system.
 

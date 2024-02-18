@@ -1,10 +1,11 @@
-+++
-weight = 2
-date = "2023-11-28"
-title = "Usage"
-icon = "fa-solid fa-book"
-toc = true
-+++
+---
+weight: 2
+date: "2023-11-28"
+title: "Usage"
+description: "Features, functions, and options of the SpMs command-line interface"
+icon: "fa-solid fa-book"
+toc: true
+---
 
 ######
 

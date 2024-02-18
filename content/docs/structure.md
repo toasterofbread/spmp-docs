@@ -1,11 +1,17 @@
 ---
 weight: 1
 title: "Structure"
-description: ""
-icon: "fa-solid fa-code"
+description: "Advanced setups for multi-device support and other use-cases"
+icon: "fa-solid fa-network-wired"
 date: "2023-12-08"
 toc: true
 ---
+
+######
+
+{{< alert context="info" text="By default, the server and player are automatically run as part of the client app and require no additional setup. If you just want to listen to music, all you need is the **client**." />}}
+
+######
 
 SpMp is made up of three main parts:
 
@@ -14,8 +20,6 @@ SpMp is made up of three main parts:
 The main user-facing application with UI for music browsing and playback implemented on both Android and desktop. The client does not directly handle audio playback and queue management, which are instead managed by the server and player.
 
 **[Read more]({{% relref "docs/client/about" %}}) • [Source code](https://github.com/toasterofbread/spmp)**
-
-{{< alert context="info" text="By default, the server and player are automatically run as part of the client app and require no additional setup." />}}
 
 ## Server
 AKA **SpMp-Server**, **SpMs**
@@ -38,14 +42,14 @@ SpMp's split-architecture design allows for three main types of setup:
 
 ## Standalone client
 
-The default setup on both Android and desktop in which the client starts and manages its own server and player for audio playback. 
-The server and player are implemented as a background service on **Android**, so they will continue to run after closing the client app by default. 
+The default setup on both Android and desktop in which the client starts and manages its own server and player for audio playback.
+The server and player are implemented as a background service on **Android**, so they will continue to run after closing the client app by default.
 
 On **desktop**, the server and player are run as a subprocess by default meaning that closing the client will result in the server also closing and audio playback being interrupted. To detach audio playback from the lifecycle of the client on desktop, use a **client-server** setup.
 
 ## Client-server
 
-On desktop, the simplest example of this setup is to run `spmp` (client) and `spms` (server) in two terminals on the same device. Interacting with SpMp will send commands to SpMs which manages and maintains the state of the music queue and playback. Audio playback is also handled by SpMs which, by default, acts as a player as well as a server. 
+On desktop, the simplest example of this setup is to run `spmp` (client) and `spms` (server) in two terminals on the same device. Interacting with SpMp will send commands to SpMs which manages and maintains the state of the music queue and playback. Audio playback is also handled by SpMs which, by default, acts as a player as well as a server.
 
 Because the client and server are running independently in this case, the client can be closed and reopened freely without interrupting audio playback.
 

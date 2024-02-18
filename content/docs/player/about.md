@@ -1,14 +1,14 @@
-+++
-weight = 1
-date = "2023-12-08"
-title = "Player client"
-icon = "fa-solid fa-book"
-toc = false
-+++
+---
+weight: 1
+date: "2023-12-08"
+title: "Player client"
+icon: "fa-solid fa-book"
+toc: false
+---
 
 Standalone client for the SpMp [server]({{% relref "/docs/server/about" %}}) that plays audio using mpv.
 
-###### 
+######
 
 ## Usage
 

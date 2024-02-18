@@ -1,7 +1,8 @@
 ---
 weight: 11
 title: "Building from source"
-description: ""
+description: "Step-by-step instructions for compiling from source code for each platform"
+icon: "fa-solid fa-wrench"
 date: "2023-12-20"
 toc: true
 ---
@@ -9,7 +10,16 @@ toc: true
 This page outlines procedures for compiling SpMs from its source code. For installing from pre-compiled packages, see [Installation]({{% relref "docs/server/installation" %}}).
 
 ##### Requirements
-- [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu]())
+
+All platforms:
+- [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu](https://packages.ubuntu.com/openjdk-17-jdk))
+
+Linux only:
+- pkg-config ([Arch](https://archlinux.org/packages/core/x86_64/pkgconf/), [Ubuntu](https://packages.ubuntu.com/pkg-config))
+- make ([Arch](https://archlinux.org/packages/core/x86_64/make/), [Ubuntu](https://packages.ubuntu.com/make))
+- libmpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
+- libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-dev))
+- libcurl ([Arch](https://archlinux.org/packages/core/x86_64/curl/), [Ubuntu](https://packages.ubuntu.com/libcurl4-openssl-dev))
 
 ### Downloading source code
 
@@ -25,16 +35,38 @@ From a command-line terminal:
 
 #### Linux
 
-1. Compile libzmq with draft APIs
-    1. Download [4.3.5](https://github.com/zeromq/libzmq/releases/tag/v4.3.5) libzmq source code ([direct link](https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz))
-    2. Extract downloaded archive to a convenient location and cd into the extracted directory
-    3. Configure build by running `./configure --enable-drafts --enable-static --disable-shared --disable-libbsd --prefix=<absolute path to spms/src/nativeInterop>`
-    4. Build and install libzmq by running `make -j$(nproc) && make install`
-2. Install other dependencies
-    - libmpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
-    - libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-1))
-3. Compile SpMs by running the Gradle command `nativeBinaries`
-4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
+
+###### 1. Install the Kotlin/Native gcc toolchain
+1. Download toolchain from https://download.jetbrains.com/kotlin/native/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz
+2. Extract downloaded archive to a convenient location
+
+###### 2. Compile libzmq with draft APIs
+1. Download [4.3.5](https://github.com/zeromq/libzmq/releases/tag/v4.3.5) libzmq source code ([direct link](https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz))
+2. Extract downloaded archive to a convenient location and cd into the extracted directory
+3. Configure and compile the build by running the following commands (make sure to replace the parts enclosed with <>)
+
+```
+# Configure build
+LDFLAGS="-lgcc -lgcc_s" \
+CC=<path to extracted toolchain>/bin/x86_64-unknown-linux-gnu-gcc \
+CXX=<path to extracted toolchain>/bin/x86_64-unknown-linux-gnu-g++ \
+./configure \
+    --enable-drafts \
+    --enable-static \
+    --disable-shared \
+    --disable-libbsd \
+    --prefix=<absolute path to spms/src/nativeInterop>
+
+# Compile
+make -j$(nproc)
+
+# Install to prefix
+make install
+```
+
+###### 3. Compile SpMs by running the Gradle command `nativeBinaries`
+
+###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
 
 #### Windows
 

@@ -1,7 +1,8 @@
 ---
 weight: 3
 title: "Building from source"
-description: ""
+description: "Step-by-step instructions for compiling from source code for each platform"
+icon: "fa-solid fa-wrench"
 date: "2023-12-20"
 toc: true
 ---
@@ -20,13 +21,15 @@ This page outlines procedures for compiling SpMp from its source code. For insta
 - desktop-file-utils ([Arch](https://archlinux.org/packages/extra/x86_64/desktop-file-utils/), [Ubuntu](https://packages.ubuntu.com/desktop-file-utils))
 - appstream ([Arch](https://archlinux.org/packages/extra/x86_64/appstream/), [Ubuntu](https://packages.ubuntu.com/search?keywords=appstream))
 
+#####
+
 ### Downloading source code
 
 {{< alert context="warning" text="SpMp cannot be compiled directly from source code downloaded through GitHub's website, as this method does not include submodules" />}}
 
 From a command-line terminal:
 
-1. Clone the SpMp Git repository and its submodules 
+1. Clone the SpMp Git repository and its submodules
 `git clone https://github.com/toasterofbread/spmp --recurse-submodules`
 
 2. Enter the cloned directory `cd spmp`
@@ -41,13 +44,13 @@ From a command-line terminal:
 
 Gradle command: `androidApp:packageRelease` (Debug: `androidApp:packageDebug`)
 
-To build separate APKs for each CPU architecture instead of a single universal APK, set enableApkSplit to true by appending the Gradle command with `-DenableApkSplit=true`.
+To build separate APKs for each CPU architecture instead of a single universal APK, set enableApkSplit to true by appending `-DenableApkSplit=true` to the Gradle command.
 
 Compiled APK(s) will be stored in `androidApp/build/outputs/apk/`.
 
 ##### Linux
 
-Gradle command: `desktopApp:actuallyPackageAppImage`
+Gradle command: `desktopApp:packageReleaseAppImage` (Debug: `desktopApp:packageAppImage`)
 
 The AppImage will be packaged into `desktopApp/build/`.
 
