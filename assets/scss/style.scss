@@ -10,6 +10,15 @@ $font-family-monospace:  {{ .Site.Params.mono_font | default "SFMono-Regular, Me
 //     }
 // }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+}
+
 .para-desc {
     color: red !important !important;
 }

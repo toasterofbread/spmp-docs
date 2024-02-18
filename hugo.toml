@@ -13,7 +13,7 @@ title = "SpMp"
     version = true
 
 [params.social]
-    github = "toasterofbread"
+    github = "toasterofbread/spmp"
 
 [params.docs]
     sidebarIcons = false

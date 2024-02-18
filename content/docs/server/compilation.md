@@ -21,35 +21,40 @@ Linux only:
 - libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-dev))
 - libcurl ([Arch](https://archlinux.org/packages/core/x86_64/curl/), [Ubuntu](https://packages.ubuntu.com/libcurl4-openssl-dev))
 
-### Downloading source code
+### Download source code
 
 From a command-line terminal:
 
-1. Clone the spmp-server Git repository `git clone https://github.com/toasterofbread/spmp-server`
+1. Clone the spmp-server Git repository
+
+    `git clone https://github.com/toasterofbread/spmp-server`
 
 2. Enter the cloned directory `cd spmp-server`
 
-### Compiling
-
 {{< snippet "gradle_commands.md" >}}
 
-#### Linux
-
+### Build on Linux
 
 ###### 1. Install the Kotlin/Native gcc toolchain
-1. Download toolchain from https://download.jetbrains.com/kotlin/native/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz
+1. Download toolchain from
+
+    https://download.jetbrains.com/kotlin/native/x86_64-unknown-linux-gnu-gcc-8.3.0-glibc-2.19-kernel-4.9-2.tar.gz
+
 2. Extract downloaded archive to a convenient location
 
 ###### 2. Compile libzmq with draft APIs
-1. Download [4.3.5](https://github.com/zeromq/libzmq/releases/tag/v4.3.5) libzmq source code ([direct link](https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz))
+1. Download [4.3.5](https://github.com/zeromq/libzmq/releases/tag/v4.3.5) libzmq source code
+
+    https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz
+
 2. Extract downloaded archive to a convenient location and cd into the extracted directory
-3. Configure and compile the build by running the following commands (make sure to replace the parts enclosed with <>)
+3. Configure and compile the build by running the following commands
 
 ```
 # Configure build
 LDFLAGS="-lgcc -lgcc_s" \
-CC=<path to extracted toolchain>/bin/x86_64-unknown-linux-gnu-gcc \
-CXX=<path to extracted toolchain>/bin/x86_64-unknown-linux-gnu-g++ \
+CC=<toolchain path>/bin/x86_64-unknown-linux-gnu-gcc \
+CXX=<toolchain path>/bin/x86_64-unknown-linux-gnu-g++ \
 ./configure \
     --enable-drafts \
     --enable-static \
@@ -68,19 +73,26 @@ make install
 
 ###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
 
-#### Windows
+### Build on Windows
 
-1. Download libmpv
-    1. Download ``mpv-dev-x86_64-20240121(...).7z`` from https://sourceforge.net/projects/mpv-player-windows/files/libmpv/ ([direct link](https://deac-ams.dl.sourceforge.net/project/mpv-player-windows/libmpv/mpv-dev-x86_64-20240121-git-a39f9b6.7z))
-    2. Extract the downloaded zip to a convenient location
-    3. Copy/move the following files/directories from the extracted zip:
-        - `include` -> `spms/src/nativeInterop/`
-        - `libmpv.dll.a` -> `spms/src/nativeInterop/lib`
-        - `libmpv-2.dll` -> `spms/src/nativeInterop/bin`
-2. Download libzmq with draft APIs
-    1. Clone the `https://github.com/Microsoft/vcpkg.git` Git repository (`--depth 1` argument recommended)
-    2. Run `bootstrap-vcpkg.bat` inside the cloned directory
-    3. Run `vcpkg install zeromq[draft]:x64-windows` inside the cloned directory
-    4. Copy the `bin`, `include`, and `lib` directories from `<cloned directory>/packages/zeromq_x64-windows` to `spms/src/nativeInterop`
-3. Compile SpMs by running the Gradle command `nativeBinaries`
-4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
+###### 1. Download libmpv
+1. Download ``mpv-dev-x86_64-20240121(...).7z`` from the [libmpv SourceForge page](https://sourceforge.net/projects/mpv-player-windows/files/libmpv/)
+
+    https://deac-ams.dl.sourceforge.net/project/mpv-player-windows/libmpv/mpv-dev-x86_64-20240121-git-a39f9b6.7z
+
+2. Extract the downloaded zip to a convenient location
+3. Copy/move the following files/directories from the extracted zip:
+
+    - `include` -> `spms/src/nativeInterop/`
+    - `libmpv.dll.a` -> `spms/src/nativeInterop/lib`
+    - `libmpv-2.dll` -> `spms/src/nativeInterop/bin`
+
+###### 2. Download libzmq with draft APIs
+1. Clone the `https://github.com/Microsoft/vcpkg.git` Git repository (`--depth 1` argument recommended)
+2. Run `bootstrap-vcpkg.bat` inside the cloned directory
+3. Run `vcpkg install zeromq[draft]:x64-windows` inside the cloned directory
+4. Copy the `bin`, `include`, and `lib` directories from `<cloned directory>/packages/zeromq_x64-windows` to `spms/src/nativeInterop`
+
+###### 3. Compile SpMs by running the Gradle command `nativeBinaries`
+
+###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
