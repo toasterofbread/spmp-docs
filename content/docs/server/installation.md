@@ -12,7 +12,7 @@ This page outlines methods of installing SpMs and its dependencies using pre-com
 
 ### Linux
 
-###### Requirements
+###### Dependencies
 
 - libmpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
 - libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-1))
