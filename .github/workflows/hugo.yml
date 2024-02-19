@@ -31,10 +31,10 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       
       - name: Install Dart Sass
-        run: snap install dart-sass
+        run: sudo snap install dart-sass
       
       - name: Add golang-backports repository
-        run: add-apt-repository ppa:longsleep/golang-backports && apt update
+        run: sudo add-apt-repository ppa:longsleep/golang-backports && sudo apt update
       
       - name: Install Go
         uses: awalsh128/cache-apt-pkgs-action@latest
