@@ -30,15 +30,15 @@ APKs can be downloaded from the [release page](https://github.com/toasterofbread
 The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases).
 
 #### Dependencies
-##### All OSes
+###### All OSes
 
 - Java
 
-##### Linux only
+###### Linux only
 
 - All [dependencies of SpMs]({{% relref "docs/server/installation" %}}) (required to run the packaged SpMs executable)
 
-#### Details
+##### Details
 
 If you're using a stable release and intend to use SpMp on its own without an external server instance, setting up SpMs is not required. However, because SpMp runs a packaged SpMs executable automatically, its dependencies must still be installed.
 
