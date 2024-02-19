@@ -9,7 +9,7 @@ toc: true
 
 ######
 
-{{< alert context="info" text="By default, the server and player are automatically run as part of the client app and require no additional setup. If you just want to listen to music, all you need is the **client**." />}}
+{{< alert context="info" text="By default, the server and player are automatically ran as part of the client app and require no additional setup. If you just want to listen to music, all you need is the **client**." />}}
 
 ######
 
@@ -45,7 +45,7 @@ SpMp's split-architecture design allows for three main types of setup:
 The default setup on both Android and desktop in which the client starts and manages its own server and player for audio playback.
 The server and player are implemented as a background service on **Android**, so they will continue to run after closing the client app by default.
 
-On **desktop**, the server and player are run as a subprocess by default meaning that closing the client will result in the server also closing and audio playback being interrupted. To detach audio playback from the lifecycle of the client on desktop, use a **client-server** setup.
+On **desktop**, the server and player are ran as a subprocess by default meaning that closing the client will result in the server also closing and audio playback being interrupted. To detach audio playback from the lifecycle of the client on desktop, use a **client-server** setup.
 
 ## Client-server
 
@@ -53,7 +53,7 @@ On desktop, the simplest example of this setup is to run `spmp` (client) and `sp
 
 Because the client and server are running independently in this case, the client can be closed and reopened freely without interrupting audio playback.
 
-While the server can be run on a separate device from the client, this will leave the client device with no audio playback. A **client-server-player** setup does not have this limitation.
+While the server can be ran on a separate device from the client, this will leave the client device with no audio playback. A **client-server-player** setup does not have this limitation.
 
 ## Client-server-player
 

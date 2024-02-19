@@ -29,9 +29,9 @@ APKs can be downloaded from the [release page](https://github.com/toasterofbread
 
 The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases). Java must be installed on the system for both OSes.
 
-On desktop, SpMp plays audio by connecting to a running instance of [SpMs]({{% relref "docs/server/about" %}}). If you're using a stable release, you don't need to worry about this as SpMs comes packaged with releases of SpMp and is handled automatically by default.
+On desktop, SpMp plays audio by connecting to a running instance of [SpMs]({{% relref "docs/server/about" %}}). If you're using a stable release, you don't need to worry about this as SpMs comes packaged with releases of SpMp and is ran automatically by default.
 
-For Linux, SpMp is packaged as a standalone AppImage which can be executed directly without installation. The Windows version comes as an installer which unpackages the application's files to `C:/Program Files/spmp` (by default). It can be run using the shortcut automatically added to the system.
+For Linux, SpMp is packaged as a standalone AppImage which can be executed directly without installation. The Windows version comes as an installer which unpackages the application's files to `C:/Program Files/spmp` (by default). It can be ran using the shortcut automatically added to the system.
 
 ### Nightly builds
 
