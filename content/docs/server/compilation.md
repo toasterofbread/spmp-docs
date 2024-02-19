@@ -60,7 +60,7 @@ CXX=<toolchain path>/bin/x86_64-unknown-linux-gnu-g++ \
     --enable-static \
     --disable-shared \
     --disable-libbsd \
-    --prefix=<absolute path to spms/src/nativeInterop>
+    --prefix=<absolute path to spms>/src/nativeInterop/linux-x86_64
 
 # Compile
 make -j$(nproc)
@@ -75,23 +75,36 @@ make install
 
 ### Build on Windows
 
-###### 1. Download libmpv
+###### 1. Download and set up vcpkg
+1. Clone the `https://github.com/Microsoft/vcpkg.git` Git repository (`--depth 1` argument recommended)
+2. Run `bootstrap-vcpkg.bat` inside the cloned directory
+
+###### 2. Build libzmq and libcurl
+1. Run `vcpkg install curl:x64-windows` inside the vcpkg directory
+2. Run `vcpkg install zeromq[draft]:x64-windows` inside the vcpkg directory
+3. Copy the `bin`, `include`, and `lib` directories from `<vcpkg directory>/installed/x64-windows` to `spms/src/nativeInterop/windows-x86_64`
+
+###### 3. Download libmpv
 1. Download ``mpv-dev-x86_64-20240121(...).7z`` from the [libmpv SourceForge page](https://sourceforge.net/projects/mpv-player-windows/files/libmpv/)
 
     https://deac-ams.dl.sourceforge.net/project/mpv-player-windows/libmpv/mpv-dev-x86_64-20240121-git-a39f9b6.7z
 
-2. Extract the downloaded zip to a convenient location
+2. Extract the downloaded archive to a convenient location
 3. Copy/move the following files/directories from the extracted zip:
 
-    - `include` -> `spms/src/nativeInterop/`
-    - `libmpv.dll.a` -> `spms/src/nativeInterop/lib`
-    - `libmpv-2.dll` -> `spms/src/nativeInterop/bin`
+    - `include` into `spms/src/nativeInterop/windows-x86_64`
+    - `libmpv.dll.a` into `spms/src/nativeInterop/windows-x86_64/lib`
+    - `libmpv-2.dll` into `spms/src/nativeInterop/windows-x86_64/bin`
 
-###### 2. Download libzmq with draft APIs
-1. Clone the `https://github.com/Microsoft/vcpkg.git` Git repository (`--depth 1` argument recommended)
-2. Run `bootstrap-vcpkg.bat` inside the cloned directory
-3. Run `vcpkg install zeromq[draft]:x64-windows` inside the cloned directory
-4. Copy the `bin`, `include`, and `lib` directories from `<cloned directory>/packages/zeromq_x64-windows` to `spms/src/nativeInterop`
+<!-- {{< collapsible summary="Cross-compiling from Linux" >}}
+
+1. Install mingw-w64-gcc ([Arch](https://archlinux.org/packages/extra/x86_64/mingw-w64-gcc/), [Ubuntu](https://packages.ubuntu.com/gcc-mingw-w64))
+2. Clone the `https://github.com/Microsoft/vcpkg.git` Git repository (`--depth 1` argument recommended)
+3. Run `./bootstrap-vcpkg.sh` inside the cloned directory
+4. Run `./vcpkg install zeromq[draft]:x64-mingw-dynamic` inside the cloned directory
+5. Copy the `bin`, `include`, and `lib` directories from `<cloned directory>/packages/zeromq_x64-mingw-dynamic` to `spms/src/nativeInterop`
+
+{{< /collapsible >}} -->
 
 ###### 3. Compile SpMs by running the Gradle command `nativeBinaries`
 

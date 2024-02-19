@@ -1,1 +1,1 @@
-{{< alert context="warning" text="SpMp's desktop version and accompanying server are in the early stages of development, so some things might not work. You've been warned!" />}}
+{{< alert context="info" text="SpMp's desktop version and accompanying server are relatively new and may not be as polished as the Android version." button1="Report a bug in the client" button1link="https://github.com/toasterofbread/spmp/issues" button2="Report a bug in the server" button2link="https://github.com/toasterofbread/spmp-server/issues" />}}

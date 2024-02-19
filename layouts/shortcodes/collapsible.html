@@ -1,0 +1,14 @@
+{{ $summary := .Get "summary" }}
+
+<details>
+    {{ with $summary }}
+    <summary>{{ . | markdownify }}</summary>
+    {{ else }}
+    <summary></summary>
+    {{ end }}
+
+<br>
+{{ .Inner | markdownify }}
+<br>
+
+<details>

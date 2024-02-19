@@ -21,8 +21,6 @@ This page outlines procedures for compiling SpMp from its source code. For insta
 - desktop-file-utils ([Arch](https://archlinux.org/packages/extra/x86_64/desktop-file-utils/), [Ubuntu](https://packages.ubuntu.com/desktop-file-utils))
 - appstream ([Arch](https://archlinux.org/packages/extra/x86_64/appstream/), [Ubuntu](https://packages.ubuntu.com/search?keywords=appstream))
 
-#####
-
 ### Downloading source code
 
 {{< alert context="warning" text="SpMp cannot be compiled directly from source code downloaded through GitHub's website, as this method does not include submodules" />}}
@@ -33,8 +31,6 @@ From a command-line terminal:
 `git clone https://github.com/toasterofbread/spmp --recurse-submodules`
 
 2. Enter the cloned directory `cd spmp`
-
-#####
 
 ### Compiling
 
@@ -56,10 +52,12 @@ The AppImage will be packaged into `desktopApp/build/`.
 
 ##### Windows
 
-Gradle command: `desktopApp:packageReleaseExe` (Debug: `desktopApp:packageDebugExe`)
+Gradle command: `desktopApp:packageReleaseExe` (Debug: `desktopApp:packageExe`)
 
 The installer executable will be packaged into `desktopApp/build/compose/binaries/`.
 
-####
-
 {{< alert context="info" text="Compilation of SpMp is known to occasionally fail with the following error: `BackendException: Backend Internal error: Exception during IR lowering`. This can be safely ignored, just try the build again." />}}
+
+### Packaging with SpMs
+
+To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `Static`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`

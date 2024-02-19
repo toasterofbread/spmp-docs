@@ -32,7 +32,7 @@ The desktop version of SpMp is available on Linux and Windows. Both can be downl
 #### Dependencies
 ###### All OSes
 
-- Java
+- [Java](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu](https://packages.ubuntu.com/focal/openjdk-17-jre))
 
 ###### Linux only
 
