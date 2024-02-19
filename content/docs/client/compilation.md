@@ -60,4 +60,10 @@ The installer executable will be packaged into `desktopApp/build/compose/binarie
 
 ### Packaging with SpMs
 
-To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `Static`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`
+##### Prerequisites
+
+Before starting, follow the instructions for compiling [SpMs]({{% relref "docs/server/compilation" %}}) up to (but not including) running the final Gradle command. However, instead of cloning the SpMs repository, perform the steps within the spmp-server submodule directory within the SpMp source code.
+
+##### Packaging
+
+To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `Static`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`.

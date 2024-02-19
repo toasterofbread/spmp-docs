@@ -69,9 +69,9 @@ make -j$(nproc)
 make install
 ```
 
-###### 3. Compile SpMs by running the Gradle command `nativeBinaries`
+###### 3. Compile SpMs by running the Gradle command `linux-x86_64BinariesStatic`
 
-###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
+###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/linux-x86_64/debugExecutable/` and `spms/build/bin/linux-x86_64/releaseExecutable/` respectively
 
 ### Build on Windows
 
@@ -106,6 +106,6 @@ make install
 
 {{< /collapsible >}} -->
 
-###### 3. Compile SpMs by running the Gradle command `nativeBinaries`
+###### 3. Compile SpMs by running the Gradle command `windows-x86_64Binaries`
 
-###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/native/debugExecutable/` and `spms/build/bin/native/releaseExecutable/` respectively
+###### 4. Upon completion, debug and release executables will be contained in `spms/build/bin/windows-x86_64/debugExecutable/` and `spms/build/bin/windows-x86_64/releaseExecutable/` respectively

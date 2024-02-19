@@ -9,7 +9,7 @@ title = "SpMp"
     mono_font = "Fira Code"
 
 [params.footer]
-    copyright = "Built with 愛 by [toasterofbread](https://github.com/toasterofbread) using [Hugo](https://github.com/gohugoio/hugo), [Lotus Docs](https://github.com/colinwilson/lotusdocs), and [Catppuccin](https://github.com/catppuccin/catppuccin)."
+    copyright = "Built with 愛 by [toasterofbread](https://github.com/toasterofbread) using [Hugo](https://github.com/gohugoio/hugo), [Lotus Docs](https://github.com/colinwilson/lotusdocs), and [Catppuccin](https://github.com/catppuccin/catppuccin). The source code of this website is available [here](https://github.com/toasterofbread/spmp-docs)."
     version = true
 
 [params.social]
