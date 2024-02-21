@@ -10,7 +10,7 @@ hero:
       mobile: "waves.svg"
 
   badge:
-    text: v0.3.0 (DRAFT)
+    text: v0.3.0
     color: primary
     pill: false
     soft: false

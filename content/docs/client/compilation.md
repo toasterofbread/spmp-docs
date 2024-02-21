@@ -40,7 +40,7 @@ From a command-line terminal:
 
 Gradle command: `androidApp:packageRelease` (Debug: `androidApp:packageDebug`)
 
-To build separate APKs for each CPU architecture instead of a single universal APK, set enableApkSplit to true by appending `-DenableApkSplit=true` to the Gradle command.
+To build separate APKs for each CPU architecture instead of a single universal APK, add the argument `-PenableApkSplit` to the Gradle command.
 
 Compiled APK(s) will be stored in `androidApp/build/outputs/apk/`.
 
