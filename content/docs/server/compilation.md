@@ -80,14 +80,13 @@ make install
 2. Run `bootstrap-vcpkg.bat` inside the cloned directory
 
 ###### 2. Build libzmq and libcurl
-1. Run `vcpkg install curl:x64-windows` inside the vcpkg directory
-2. Run `vcpkg install zeromq[draft]:x64-windows` inside the vcpkg directory
-3. Copy the `bin`, `include`, and `lib` directories from `<vcpkg directory>/installed/x64-windows` to `spms/src/nativeInterop/windows-x86_64`
+1. Run `vcpkg install zeromq[draft]:x64-windows curl:x64-windows` inside the vcpkg directory
+2. Copy the `bin`, `include`, and `lib` directories from `<vcpkg directory>/installed/x64-windows` to `spms/src/nativeInterop/windows-x86_64`
 
 ###### 3. Download libmpv
 1. Download ``mpv-dev-x86_64-20240121(...).7z`` from the [libmpv SourceForge page](https://sourceforge.net/projects/mpv-player-windows/files/libmpv/)
 
-    https://deac-ams.dl.sourceforge.net/project/mpv-player-windows/libmpv/mpv-dev-x86_64-20240121-git-a39f9b6.7z
+    https://sourceforge.net/projects/mpv-player-windows/files/libmpv/mpv-dev-x86_64-20240121-git-a39f9b6.7z
 
 2. Extract the downloaded archive to a convenient location
 3. Copy/move the following files/directories from the extracted zip:
