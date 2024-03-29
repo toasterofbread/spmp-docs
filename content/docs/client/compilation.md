@@ -66,4 +66,4 @@ Before starting, follow the instructions for compiling [SpMs]({{% relref "docs/s
 
 ##### Packaging
 
-To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `Static`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`.
+To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `WithServer`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`.
