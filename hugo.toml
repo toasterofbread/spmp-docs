@@ -1,8 +1,14 @@
 baseURL = "https://spmp.toastbits.dev/"
 languageCode = "en-GB"
 title = "SpMp"
+test = "aaa"
 
 [params]
+    latest_version = "0.3.x"
+    latest_version_label = "(latest)"
+    draft_versions = ["0.4.x"]
+    draft_version_label = "(draft)"
+
     google_fonts = [["Raleway", "500, 700"], ["Fira Code", "500, 700"], ["Rubik", "400"]]
     sans_serif_font = "Rubik"
     secondary_font = "Raleway"
@@ -22,10 +28,13 @@ title = "SpMp"
     intLinkTooltip = true
 
 [module]
-    replacements = "github.com/colinwilson/lotusdocs -> lotusdocs"
+    replacements = "github.com/colinwilson/lotusdocs -> lotusdocs,github.com/gcc42/hugo-redirect -> hugo-redirect"
     [[module.imports]]
         path = "github.com/colinwilson/lotusdocs"
         disable = false
     [[module.imports]]
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+        disable = false
+    [[module.imports]]
+        path = "github.com/gcc42/hugo-redirect"
         disable = false

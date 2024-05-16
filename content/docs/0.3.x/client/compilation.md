@@ -7,7 +7,7 @@ date: "2023-12-20"
 toc: true
 ---
 
-This page outlines procedures for compiling SpMp from its source code. For installing from pre-compiled packages, see [Installation]({{% relref "docs/client/installation" %}}).
+This page outlines procedures for compiling SpMp from its source code. For installing from pre-compiled packages, see [Installation]({{% relref "./installation" %}}).
 
 ### Requirements
 
@@ -62,7 +62,7 @@ The installer executable will be packaged into `desktopApp/build/compose/binarie
 
 ##### Prerequisites
 
-Before starting, follow the instructions for compiling [SpMs]({{% relref "docs/server/compilation" %}}) up to (but not including) running the final Gradle command. However, instead of cloning the SpMs repository, perform the steps within the spmp-server submodule directory within the SpMp source code.
+Before starting, follow the instructions for compiling [SpMs]({{% relref "../server/compilation" %}}) up to (but not including) running the final Gradle command. However, instead of cloning the SpMs repository, perform the steps within the spmp-server submodule directory within the SpMp source code.
 
 ##### Packaging
 

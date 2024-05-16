@@ -4,3 +4,4 @@
 *.sum
 /assets/jsconfig.json
 hugo_stats.json
+/public

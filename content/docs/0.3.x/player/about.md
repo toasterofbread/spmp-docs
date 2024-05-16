@@ -6,7 +6,7 @@ icon: "fa-solid fa-book"
 toc: false
 ---
 
-Standalone client for the SpMp [server]({{% relref "/docs/server/about" %}}) that plays audio using mpv.
+Standalone client for the SpMp [server]({{% relref "/docs/0.3.x/server/about" %}}) that plays audio using mpv.
 
 ######
 

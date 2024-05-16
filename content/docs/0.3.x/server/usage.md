@@ -23,7 +23,7 @@ The server will run on the specified port, or port `3973` by default.
 
 {{< cmdline-option name="headless" alt="x" >}}
 
-Runs the server in headless mode (without the player client). Audio playback will not be handled by the server, so a [player client]({{% relref "/docs/player/about" %}}) must be ran manually.
+Runs the server in headless mode (without the player client). Audio playback will not be handled by the server, so a [player client]({{% relref "/docs/0.3.x/player/about" %}}) must be ran manually.
 
 ######
 

@@ -19,20 +19,20 @@ SpMp is made up of three main parts:
 
 The main user-facing application with UI for music browsing and playback implemented on both Android and desktop. The client does not directly handle audio playback and queue management, which are instead managed by the server and player.
 
-**[Read more]({{% relref "docs/client/about" %}}) • [Source code](https://github.com/toasterofbread/spmp)**
+**[Read more]({{% relref "./client/about" %}}) • [Source code](https://github.com/toasterofbread/spmp)**
 
 ## Server
 AKA **SpMp-Server**, **SpMs**
 
 The server component of SpMp's desktop version, implemented as a command-line program on desktop and as a background service on Android. By default, the server also acts as a player.
 
-**[Read more]({{% relref "docs/server/about" %}}) • [Source code](https://github.com/toasterofbread/spmp-server)**
+**[Read more]({{% relref "./server/about" %}}) • [Source code](https://github.com/toasterofbread/spmp-server)**
 
 ## Player
 
 Connects to a server and acts as its own client in order to play audio. The player is a subcommand of SpMs.
 
-**[Read more]({{% relref "docs/player/about" %}}) • [Source code](https://github.com/toasterofbread/spmp-server/tree/main/src/nativeMain/kotlin/spms/player)**
+**[Read more]({{% relref "./player/about" %}}) • [Source code](https://github.com/toasterofbread/spmp-server/tree/main/src/nativeMain/kotlin/spms/player)**
 
 ######
 

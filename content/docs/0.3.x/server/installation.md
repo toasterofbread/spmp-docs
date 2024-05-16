@@ -7,7 +7,7 @@ date: "2023-12-20"
 toc: true
 ---
 
-This page outlines methods of installing SpMs and its dependencies using pre-compiled packages. For instructions to compile SpMs from its source code, see [Building from source]({{% relref "docs/server/compilation" %}}).
+This page outlines methods of installing SpMs and its dependencies using pre-compiled packages. For instructions to compile SpMs from its source code, see [Building from source]({{% relref "./compilation" %}}).
 
 ### Linux
 

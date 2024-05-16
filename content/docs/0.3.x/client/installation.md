@@ -7,7 +7,7 @@ date: "2023-12-20"
 toc: true
 ---
 
-This page outlines methods of installing SpMp and its dependencies using pre-compiled packages. For instructions to compile SpMp from its source code, see [Building from source]({{% relref "docs/client/compilation" %}}).
+This page outlines methods of installing SpMp and its dependencies using pre-compiled packages. For instructions to compile SpMp from its source code, see [Building from source]({{% relref "./compilation" %}}).
 
 ### Android
 
@@ -36,7 +36,7 @@ The desktop version of SpMp is available on Linux and Windows. Both can be downl
 
 ###### Linux only
 
-- All [dependencies of SpMs]({{% relref "docs/server/installation" %}}) (required to run the packaged SpMs executable)
+- All [dependencies of SpMs]({{% relref "../server/installation" %}}) (required to run the packaged SpMs executable)
 
 ##### Details
 

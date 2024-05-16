@@ -1,6 +1,6 @@
----
-weight: 100
-date: "2023-11-28"
-title: "SpMp documentation"
-icon: "fa-solid fa-book"
----
++++
+type = "redirect"
+url = "/docs"
+redirect_to = "/docs/latest"
+redirect_enabled = true
++++
