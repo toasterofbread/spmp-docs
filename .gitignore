@@ -1,6 +1,7 @@
 *.content
 **/_gen/**
 *.lock
+!flake.lock
 *.sum
 /assets/jsconfig.json
 hugo_stats.json
