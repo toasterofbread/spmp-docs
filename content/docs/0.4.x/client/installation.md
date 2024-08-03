@@ -11,7 +11,7 @@ This page outlines methods of installing SpMp and its dependencies using pre-com
 
 ### Android
 
-On Android, SpMp is a self-contained app with no dependencies. It supports Android version 6.0 (SDK version 23) and newer.
+On Android, SpMp is a self-contained app with no dependencies. It supports Android version 8.0 (SDK version 26) and later.
 
 {{< rawhtml >}}
 <div>
@@ -25,25 +25,102 @@ APKs can be downloaded from the [release page](https://github.com/toasterofbread
 
 ### Desktop
 
-{{< snippet "server_warning.md" >}}
+- [Tarball](#tarball)
+- [Flatpak](#flatpak) (recommended)
+- [Nix Flake](#nix-flake)
+- [AUR](#aur)
+- [Jar](#jar)
+- [AppImage](#appimage)
+- [Exe installer](#exe-installer)
 
-The desktop version of SpMp is available on Linux and Windows. Both can be downloaded from SpMp's [release page](https://github.com/toasterofbread/spmp/releases).
+There are several methods for installing SpMp on desktop platforms. For Linux, the [Flatpak](#flatpak) is recommended. For Windows, the [exe installer](#exe-installer) is recommended. SpMp is only available for x86_64 platforms.
 
-#### Dependencies
-###### All OSes
+Unless a method is marked with 'Dependencies included', the following must be installed on the system:
 
-- [Java](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu](https://packages.ubuntu.com/focal/openjdk-17-jre))
+All OSes:
+- [Java 22](https://www.oracle.com/java/technologies/downloads/#java22) or newer
+- mpv ([Arch](https://archlinux.org/packages/extra/x86_64/mpv/), [Ubuntu](https://packages.ubuntu.com/libmpv-dev))
 
-###### Linux only
+Linux only:
+- libappindicator3 ([Arch](https://archlinux.org/packages/extra/x86_64/libappindicator-gtk3/files/), [Ubuntu](https://packages.ubuntu.com/libappindicator3-1))
+- curl ([Arch](https://archlinux.org/packages/core/x86_64/curl/), [Ubuntu](https://packages.ubuntu.com/curl))
+- libxcrypt ([Arch](https://archlinux.org/packages/core/x86_64/libxcrypt-compat/), [Ubuntu](https://packages.ubuntu.com/search?keywords=libcrypt-dev))
 
-- All [dependencies of SpMs]({{% relref "../server/installation" %}}) (required to run the packaged SpMs executable)
+{{< rawhtml >}}<br>{{< /rawhtml >}}
 
-##### Details
+#### Tarball
+###### Available for Linux and Windows. Dependencies not included.
 
-If you're using a stable release and intend to use SpMp on its own without an external server instance, setting up SpMs is not required. However, because SpMp runs a packaged SpMs executable automatically, its dependencies must still be installed.
+Download a tarball distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), extract it, and run the executable contained in the `bin` directory.
 
-For Linux, SpMp is packaged as a standalone AppImage which can be executed directly without installation. The Windows version comes as an installer which unpackages the application's files to `C:/Program Files/spmp` (by default). It can be ran using the shortcut automatically added to the system.
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### Flatpak
+###### Available for Linux and Windows. Dependencies included.
+
+##### 1. Add repositories
+
+`flatpak remote-add toastbits https://flatpak.toastbits.dev/index.flatpakrepo`
+`flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+##### 2. Install application
+
+SpMp:
+
+`flatpak install dev.toastbits.spmp`
+
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### AUR (Arch User Repository)
+###### Available for Arch Linux. Dependencies included.
+
+Coming soon.
+
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### Nix Flake
+###### Available for Nix. Dependencies included.
+
+##### 1. Add SpMp to flake inputs
+
+```
+spmp.url = "github:toasterofbread/spmp/v0.4.0";
+...
+outputs = { self, nixpkgs, spmp, ... }@inputs:
+```
+
+##### 2. Add SpMp to packages
+
+```
+home.packages = [
+    ...
+    inputs.spmp.packages.${system}.default
+];
+```
+
+##### 3. Rebuild and run with `spmp`
+
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### Jar
+###### Available for Linux and Windows. Dependencies not included.
+
+Download a jar distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), then run it with `java -jar <path to jar>`.
+
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### AppImage
+###### Available for Linux. Dependencies not included.
+
+Download an AppImage distribution from the [releases page](https://github.com/toasterofbread/spmp/releases) and run it.
+
+{{< rawhtml >}}<br>{{< /rawhtml >}}
+
+#### Exe installer
+###### Available for Windows. Dependencies included (excluding Java).
+
+Download an exe distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), then install and run it.
 
 ### Nightly builds
 
-Automatically built pre-release packages are available for all platforms on the repository's [actions page](https://github.com/toasterofbread/spmp/actions). These are experimental builds which may not have been tested thoroughly, so use with caution!.
+Automatically built pre-release packages are available for all platforms on the SpMp's [actions page](https://github.com/toasterofbread/spmp/actions) (as well as [the server's](https://github.com/toasterofbread/spmp-server/actions)). These are experimental builds which may not have been tested, so use with caution!.

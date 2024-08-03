@@ -13,9 +13,9 @@ This page outlines procedures for compiling SpMp from its source code. For insta
 
 ##### All platforms:
 - [Git](https://git-scm.com/download/)
-- [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17) ([Arch](https://archlinux.org/packages/extra/x86_64/jre17-openjdk/), [Ubuntu](https://packages.ubuntu.com/focal/openjdk-17-jre))
+- [JDK 22](https://www.oracle.com/java/technologies/downloads/#java22) ([Arch](https://archlinux.org/packages/extra/x86_64/jre-openjdk/), [Ubuntu](https://packages.ubuntu.com/mantic/openjdk-22-jre))
 
-##### Linux (for packaging AppImage):
+##### Linux (optional, for packaging AppImage):
 - [appimagetool](https://github.com/AppImage/appimagetool/releases/) (must be accessible on PATH as `appimagetool`)
     - AUR: [appimagetool-bin](https://aur.archlinux.org/packages/appimagetool-bin)
 - desktop-file-utils ([Arch](https://archlinux.org/packages/extra/x86_64/desktop-file-utils/), [Ubuntu](https://packages.ubuntu.com/desktop-file-utils))
@@ -46,13 +46,18 @@ Compiled APK(s) will be stored in `androidApp/build/outputs/apk/`.
 
 ##### Linux
 
-Gradle command: `desktopApp:packageReleaseAppImage` (Debug: `desktopApp:packageAppImage`)
+Gradle command:
+- Tarball: `desktopApp:packageReleaseTarball`
+- Jar: `desktopApp:packageReleaseUberJarForCurrentOS`
+- AppImage: `desktopApp:packageReleaseAppImage`
 
-The AppImage will be packaged into `desktopApp/build/`.
+Outputs will be placed in `desktopApp/build/outputs`.
 
 ##### Windows
 
-Gradle command: `desktopApp:packageReleaseExe` (Debug: `desktopApp:packageExe`)
+Gradle command:
+- Tarball: `desktopApp:packageReleaseTarball`
+- Exe: `desktopApp:packageReleaseExe`
 
 The installer executable will be packaged into `desktopApp/build/compose/binaries/`.
 
@@ -60,10 +65,4 @@ The installer executable will be packaged into `desktopApp/build/compose/binarie
 
 ### Packaging with SpMs
 
-##### Prerequisites
-
-Before starting, follow the instructions for compiling [SpMs]({{% relref "../server/compilation" %}}) up to (but not including) running the final Gradle command. However, instead of cloning the SpMs repository, perform the steps within the spmp-server submodule directory within the SpMp source code.
-
-##### Packaging
-
-To include an spmp-server executable in a desktop SpMp package (this is the default for releases of SpMp), append the Gradle build command with `WithServer`. For example, to build a release AppImage packaged with the server, run the task `desktopApp:packageReleaseAppImageWithServer`.
+Prior to [8d386c2](https://github.com/toasterofbread/spmp/commit/8d386c23412b469fa0cdf9c37793cf4c4b4231b6) (or release v0.4.0), SpMs had to be manually packaged with distributions of SpMp as a separate binary. It is now included in all builds (including local non-package builds) by default.

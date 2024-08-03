@@ -1,6 +1,6 @@
 ---
 weight: 10
-title: "Setup"
+title: "Installation"
 description: "Guide for downloading SpMs and installing requirements on each platform"
 icon: "fa-solid fa-download"
 date: "2023-12-20"
@@ -9,7 +9,20 @@ toc: true
 
 This page outlines methods of installing SpMs and its dependencies using pre-compiled packages. For instructions to compile SpMs from its source code, see [Building from source]({{% relref "./compilation" %}}).
 
-### Linux
+### Linux (Flatpak)
+
+###### 1. Add repositories
+
+`flatpak remote-add toastbits https://flatpak.toastbits.dev/index.flatpakrepo`
+`flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+###### 2. Install application
+
+SpMp:
+
+`flatpak install dev.toastbits.spmp-server`
+
+### Linux (native binary)
 
 ###### Dependencies
 
