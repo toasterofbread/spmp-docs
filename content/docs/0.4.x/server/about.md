@@ -14,8 +14,6 @@ toc: false
 
 ######
 
-{{< snippet "server_warning.md" >}}
-
 SpMs is the server component of SpMp's desktop version. It is built with [Kotlin/Native](https://kotlinlang.org/docs/native-overview.html), unlike the main SpMp codebase which uses [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) on the JVM.
 
 SpMs depends on several native C libraries through Kotlin/Native's cinterop:

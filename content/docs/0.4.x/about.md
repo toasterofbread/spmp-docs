@@ -14,18 +14,16 @@ SpMp is a YouTube Music client with a focus on customisation of colours and song
 There are two versions of SpMp. Both are part of the same multiplatform project, and as such share the same core UI and logic but have separate UI implementations for some screens.
 
 #### Android
+
 - [Media3](https://github.com/androidx/media)-based music player supporting background playback
 - Supports Android 6.0 and higher
 - Feature-complete and now in beta
 
 #### Desktop
 
-{{< snippet "server_warning.md" >}}
-
 - Split client-server architecture to allow for background playback and synchronised one-server-to-many-client setups.
 - Uses [mpv](https://github.com/mpv-player/mpv) as a backend for audio and queue management.
-- Developed primarily for Linux. Windows is also supported, but may not receive fixes with priority.
-- Currently in early development; some basic features are working but are yet to be tested thoroughly.
+- Developed primarily for Linux. Windows is also supported, but does not receive regular testing.
 
 ######
 
