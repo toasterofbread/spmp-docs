@@ -9,7 +9,7 @@ toc: true
 
 This page outlines methods of installing SpMp and its dependencies using pre-compiled packages. For instructions to compile SpMp from its source code, see [Building from source]({{% relref "./compilation" %}}).
 
-### Android
+## Android
 
 On Android, SpMp is a self-contained app with no dependencies. It supports Android version 8.0 (SDK version 26) and later.
 
@@ -23,12 +23,12 @@ On Android, SpMp is a self-contained app with no dependencies. It supports Andro
 
 APKs can be downloaded from the [release page](https://github.com/toasterofbread/spmp/releases) on SpMp's GitHub repository as well as from [F-Droid](https://f-droid.org/en/packages/com.toasterofbread.spmp/). There is no difference between APKs downloaded from GitHub and from F-Droid.
 
-### Desktop
+## Desktop
 
 - [Tarball](#tarball)
 - [Flatpak](#flatpak) (recommended)
-- [Nix Flake](#nix-flake)
 - [AUR](#aur)
+- [Nix Flake](#nix-flake)
 - [Jar](#jar)
 - [AppImage](#appimage)
 - [Exe installer](#exe-installer)
@@ -46,16 +46,12 @@ Linux only:
 - curl ([Arch](https://archlinux.org/packages/core/x86_64/curl/), [Ubuntu](https://packages.ubuntu.com/curl))
 - libxcrypt ([Arch](https://archlinux.org/packages/core/x86_64/libxcrypt-compat/), [Ubuntu](https://packages.ubuntu.com/search?keywords=libcrypt-dev))
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### Tarball
+### Tarball
 ###### Available for Linux and Windows. Dependencies not included.
 
 Download a tarball distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), extract it, and run the executable contained in the `bin` directory.
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### Flatpak
+### Flatpak
 ###### Available for Linux and Windows. Dependencies included.
 
 ##### 1. Add repositories
@@ -69,16 +65,12 @@ SpMp:
 
 `flatpak install dev.toastbits.spmp`
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### AUR (Arch User Repository)
+### AUR
 ###### Available for Arch Linux. Dependencies included.
 
-Coming soon.
+[https://aur.archlinux.org/packages/spmp](https://aur.archlinux.org/packages/spmp)
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### Nix Flake
+### Nix Flake
 ###### Available for Nix. Dependencies included.
 
 ##### 1. Add SpMp to flake inputs
@@ -100,23 +92,17 @@ home.packages = [
 
 ##### 3. Rebuild and run with `spmp`
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### Jar
+### Jar
 ###### Available for Linux and Windows. Dependencies not included.
 
 Download a jar distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), then run it with `java -jar <path to jar>`.
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### AppImage
+### AppImage
 ###### Available for Linux. Dependencies not included.
 
 Download an AppImage distribution from the [releases page](https://github.com/toasterofbread/spmp/releases) and run it.
 
-{{< rawhtml >}}<br>{{< /rawhtml >}}
-
-#### Exe installer
+### Exe installer
 ###### Available for Windows. Dependencies included (excluding Java).
 
 Download an exe distribution from the [releases page](https://github.com/toasterofbread/spmp/releases), then install and run it.
