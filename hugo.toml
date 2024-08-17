@@ -4,9 +4,9 @@ title = "SpMp"
 test = "aaa"
 
 [params]
-    latest_version = "0.3.x"
+    latest_version = "0.4.x"
     latest_version_label = "(latest)"
-    draft_versions = ["0.4.x"]
+    draft_versions = []
     draft_version_label = "(draft)"
 
     google_fonts = [["Raleway", "500, 700"], ["Fira Code", "500, 700"], ["Rubik", "400"]]

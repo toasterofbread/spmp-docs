@@ -21,4 +21,4 @@ SpMs depends on several native C libraries through Kotlin/Native's cinterop:
 - [mpv](https://mpv.io/) - Audio playback, streaming, and queue management
 - [libappindicator](https://launchpad.net/libappindicator) - Desktop tray icon on Linux
 
-The primary mode of SpMs is to run a server instance over TCP on the specified port. It comes packaged with a command-line interface for controlling the server itself as well as interacting with other servers. See [usage]({{% relref "/docs/0.3.x/server/usage" %}}) for more information.
+The primary mode of SpMs is to run a server instance over TCP on the specified port. It comes packaged with a command-line interface for controlling the server itself as well as interacting with other servers. See [usage]({{% relref "/docs/0.4.x/server/usage" %}}) for more information.
