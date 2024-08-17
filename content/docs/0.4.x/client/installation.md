@@ -109,4 +109,4 @@ Download an exe distribution from the [releases page](https://github.com/toaster
 
 ### Nightly builds
 
-Automatically built pre-release packages are available for all platforms on the SpMp's [actions page](https://github.com/toasterofbread/spmp/actions) (as well as [the server's](https://github.com/toasterofbread/spmp-server/actions)). These are experimental builds which may not have been tested, so use with caution!.
+Automatically built pre-release packages are available for all platforms on SpMp's [actions page](https://github.com/toasterofbread/spmp/actions) (as well as [the server's](https://github.com/toasterofbread/spmp-server/actions)). These are experimental builds which may not have been tested, so use with caution!.
