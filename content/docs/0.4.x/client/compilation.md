@@ -56,10 +56,10 @@ Outputs will be placed in `desktopApp/build/outputs`.
 ##### Windows
 
 Gradle command:
-- Tarball: `desktopApp:packageReleaseTarball`
-- Exe: `desktopApp:packageReleaseExe`
+- Standalone zip: `desktopApp:packageReleaseZip`
+- Installer exe: `desktopApp:packageReleaseExe`
 
-The installer executable will be packaged into `desktopApp/build/compose/binaries/`.
+Zips will be placed in `desktopApp/build/outputs` and installer exe files into `desktopApp/build/compose/binaries/`.
 
 {{< alert context="info" text="Compilation of SpMp is known to occasionally fail with the following error: `BackendException: Backend Internal error: Exception during IR lowering`. This can be safely ignored, just try the build again." />}}
 
