@@ -76,7 +76,7 @@ SpMp:
 ##### 1. Add SpMp to flake inputs
 
 ```
-spmp.url = "github:toasterofbread/spmp/v0.4.0";
+spmp.url = "github:toasterofbread/spmp/v0.4.1";
 ...
 outputs = { self, nixpkgs, spmp, ... }@inputs:
 ```
