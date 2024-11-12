@@ -2,7 +2,7 @@
 weight: 1
 date: "2023-12-08"
 title: "Player client"
-icon: "fa-solid fa-book"
+icon: "bx bxs-book"
 toc: false
 ---
 

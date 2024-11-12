@@ -2,7 +2,7 @@
 weight: 10
 title: "Setup"
 description: "Guide for downloading SpMs and installing requirements on each platform"
-icon: "fa-solid fa-download"
+icon: "bx bxs-download"
 date: "2023-12-20"
 toc: true
 ---

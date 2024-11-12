@@ -2,5 +2,5 @@
 weight: 4
 date: "2023-11-28"
 title: "Player"
-icon: "fa-solid fa-volume-low"
+icon: "bx bxs-volume-low"
 ---

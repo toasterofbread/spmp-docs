@@ -3,7 +3,7 @@ weight: 1
 date: "2023-11-28"
 title: "About"
 description: "The server component used in SpMp's desktop version, or optionally in the Android version"
-icon: "fa-solid fa-book"
+icon: "bx bxs-book"
 toc: false
 ---
 

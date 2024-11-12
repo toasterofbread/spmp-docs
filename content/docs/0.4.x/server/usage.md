@@ -3,7 +3,7 @@ weight: 2
 date: "2023-11-28"
 title: "Usage"
 description: "Features, functions, and options of the SpMs command-line interface"
-icon: "fa-solid fa-book"
+icon: "bx bxs-book"
 toc: true
 ---
 

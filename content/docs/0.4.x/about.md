@@ -2,7 +2,7 @@
 weight: -1
 title: "About SpMp"
 description: "An overview of SpMp and how it works"
-icon: "fa-solid fa-code"
+icon: "bx bx-code-alt"
 date: "2023-11-28"
 toc: false
 ---

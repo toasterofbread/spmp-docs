@@ -2,7 +2,7 @@
 weight: 2
 title: "Installation"
 description: "Guide for installing the SpMp client on Android, Linux, and Windows"
-icon: "fa-solid fa-download"
+icon: "bx bxs-download"
 date: "2023-12-20"
 toc: true
 ---

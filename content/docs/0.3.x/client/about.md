@@ -2,7 +2,7 @@
 weight: 1
 title: "About"
 description: "The main SpMp program for browsing songs and controlling playback"
-icon: "fa-solid fa-code"
+icon: "bx bx-code-alt"
 date: "2023-12-08"
 toc: true
 ---

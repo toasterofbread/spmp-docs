@@ -2,7 +2,7 @@
 weight: 2
 title: "Installation (Flatpak)"
 description: "Guide for installing the Flatpak version of the SpMp client"
-icon: "fa-solid fa-download"
+icon: "bx bxs-download"
 date: "2024-5-3"
 toc: true
 ---

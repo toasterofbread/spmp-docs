@@ -2,7 +2,7 @@
 weight: 11
 title: "Building from source"
 description: "Step-by-step instructions for compiling from source code for each platform"
-icon: "fa-solid fa-wrench"
+icon: "bx bxs-wrench"
 date: "2023-12-20"
 toc: true
 ---

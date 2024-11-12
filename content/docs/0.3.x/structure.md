@@ -2,7 +2,7 @@
 weight: 1
 title: "Structure"
 description: "Advanced setups for multi-device support and other use-cases"
-icon: "fa-solid fa-network-wired"
+icon: "bx bxs-network-chart"
 date: "2023-12-08"
 toc: true
 ---
